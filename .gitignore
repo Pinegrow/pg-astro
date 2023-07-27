@@ -19,3 +19,11 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+#Pinegrow
+_pgbackup
+_pginfo
+#optional
+pinegrow.json
+*.d.ts
+!shims.d.ts

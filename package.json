@@ -2,17 +2,49 @@
   "name": "pg-astro",
   "type": "module",
   "version": "0.0.1",
+  "homepage": "https://pg-astro-css.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinegrow/pg-astro.git"
+  },
   "scripts": {
     "dev": "astro dev",
+    "now": "npm run build && npm run preview",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "vue-devtools": "vue-devtools"
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.7",
+    "@astrojs/preact": "^2.2.1",
+    "@astrojs/react": "^2.2.1",
     "@astrojs/rss": "^2.4.3",
     "@astrojs/sitemap": "^2.0.1",
-    "astro": "^2.9.3"
-  }
+    "@astrojs/svelte": "^3.1.0",
+    "@astrojs/vue": "^2.2.1",
+    "@types/react": "^18.2.17",
+    "@types/react-dom": "^18.2.7",
+    "@vueuse/core": "^10.2.1",
+    "astro": "^2.9.3",
+    "defu": "^6.1.2",
+    "preact": "^10.16.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "svelte": "^4.1.1",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.95",
+    "@pinegrow/astro-module": "^3.0.3",
+    "@unocss/preset-icons": "^0.53.6",
+    "@vue/devtools": "^6.5.0",
+    "npm-run-all": "^4.1.5",
+    "ofetch": "^1.1.1",
+    "unocss": "^0.53.6",
+    "unplugin-vue-components": "^0.25.1",
+    "vite-plugin-vue-devtools": "^1.0.0-beta.5"
+  },
+  "web-types": "web-types.json"
 }
