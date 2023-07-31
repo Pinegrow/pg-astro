@@ -31,8 +31,13 @@
           ]
         },
         {
-          "name": "BaseButton",
+          "name": "BaseButtonDemo",
+          "description": "Note, this is not a real component in this project, added here just to show an example of how it is defined in web-types.",
           "attributes": [
+            {
+              "name": "label",
+              "placeholder": "My Button"
+            },
             {
               "name": "size",
               "customType": "select",
@@ -77,7 +82,8 @@
       ],
       "attributes": [
         {
-          "name": "color",
+          "name": "color-demo",
+          "description": "Note, this is not a global prop, added here just to show an example of how it is defined in web-types.",
           "customType": "color",
           "options": []
         }
