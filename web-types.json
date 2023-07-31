@@ -15,7 +15,21 @@
               "placeholder": "i-line-md-iconify1"
             },
             {
-              "name": "size",
+              "name": "width",
+              "customType": "select",
+              "default": "24px",
+              "options": [
+                "12px",
+                "16px",
+                "20px",
+                "24px",
+                "28px",
+                "32px",
+                "36px"
+              ]
+            },
+            {
+              "name": "height",
               "customType": "select",
               "default": "24px",
               "options": [
