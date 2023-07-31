@@ -3,18 +3,13 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "~/*": [
-        "src/*"
-      ]
+      "@/*": ["src/*"],
+      "~/*": ["src/*"],
+      "~~/*": ["*"]
     },
     "jsxImportSource": "react",
     "strict": false,
     "allowJs": true,
-    "include": [
-      "components.d.ts"
-    ]
+    "include": ["components.d.ts"]
   }
 }

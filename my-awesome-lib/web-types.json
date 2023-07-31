@@ -72,6 +72,10 @@
           "name": "MyButton",
           "attributes": [
             {
+              "name": "label",
+              "placeholder": "My Button"
+            },
+            {
               "name": "size",
               "customType": "select",
               "default": "sm",
@@ -96,8 +100,8 @@
               "description": "The default Vue slot.",
               "vue-properties": [
                 {
-                  "name": "disabled",
-                  "description": "Whether or not the Button is disabled.",
+                  "name": "disabled-demo",
+                  "description": "Whether or not the Button is disabled. Note, this is not a real slot prop, added here just to show an example of how it is defined in web-types.",
                   "type": "Boolean"
                 }
               ]
