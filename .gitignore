@@ -20,10 +20,13 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-#Pinegrow
+# Pinegrow
 _pgbackup
 _pginfo
-#optional
+
+## optional
 pinegrow.json
-*.d.ts
-!shims.d.ts
+## add any d.ts files that are auto-generated, for eg,
+auto-imports.d.ts
+components.d.ts
+composables.d.ts
