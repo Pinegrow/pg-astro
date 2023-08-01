@@ -8,7 +8,7 @@
     },
     tag: {
       type: String,
-      default: 'div',
+      default: 'span',
     },
     width: {
       type: String,
