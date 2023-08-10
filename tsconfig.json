@@ -10,6 +10,6 @@
     "jsxImportSource": "react",
     "strict": false,
     "allowJs": true,
-    "include": ["components.d.ts"]
+    "include": ["components.d.ts", "auto-imports.d.ts"]
   }
 }
