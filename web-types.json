@@ -3,6 +3,7 @@
   "name": "project",
   "framework": "vue",
   "version": "0.0.0",
+  "case-sensitive": true,
   "contributions": {
     "html": {
       "elements": [
