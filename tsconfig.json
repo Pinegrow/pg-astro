@@ -8,6 +8,7 @@
       "~/*": ["src/*"],
       "~~/*": ["*"]
     },
+    "types": ["node"],
     "jsxImportSource": "preact",
     "strict": false,
     "allowJs": true,
