@@ -86,7 +86,10 @@ Check out the [deployment documentation](https://docs.astro.build/en/guides/depl
 ### Modules/Plugins
 
 - [Pinegrow Astro Module](https://www.npmjs.com/package/@pinegrow/astro-module) - enables you to live-design your Vue single-file components visually in Vue Designer.
+- 📲 [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components) - On-demand components auto importing for Vue.
+- 📲 [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - Auto import APIs on-demand for Vite, Webpack and Rollup.
 - [VueUse](https://vueuse.org/) - collection of essential Vue composition utilities.
+- 🍍 [Pinia](https://pinia.vuejs.org/) stores for global state management. Its light-weight, type-safe, extensible, modular with vue-devtools support.
 
 ### Devtools
 
