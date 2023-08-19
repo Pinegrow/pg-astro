@@ -11,7 +11,7 @@
     "types": ["node"],
     "jsxImportSource": "preact",
     "strict": false,
-    "allowJs": true,
-    "include": ["components.d.ts", "auto-imports.d.ts"]
-  }
+    "allowJs": true
+  },
+  "exclude": ["**/node_modules/**", "**/dist/**"]
 }

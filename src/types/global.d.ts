@@ -1,5 +1,5 @@
-export {};
+export {}
 
 declare global {
-  type Maybe<T> = T | null | undefined;
+  type Maybe<T> = T | null | undefined
 }
