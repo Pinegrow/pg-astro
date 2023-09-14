@@ -30,6 +30,16 @@ cd my-astro-app
 npm install #or use pnpm
 ```
 
+(or)
+
+If you prefer a blank template (a single empty home page) instead,
+
+```bash
+npx giget@latest gh:pinegrow/pg-astro#blank my-astro-app #project-name
+cd my-astro-app
+npm install #or use pnpm
+```
+
 ## 2. Open in Vue Designer
 
 Open your project in Vue Designer and follow the instructions displayed in the Config Panel (that should pop out automatically). Config Panel ⚙️ displays the key packages and the various links to their individual ecosystems and communities.
