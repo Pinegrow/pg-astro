@@ -51,10 +51,11 @@ export default defineConfig({
     // For details, refer to https://github.com/antfu/unplugin-auto-import#configuration
     AutoImportAPIs({
       include: [
-        /.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-        /.vue$/,
-        /.vue?vue/, // .vue
-        /.md$/, // .md
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
+        /\.md$/, // .md
+        /\.mdx$/, // .mdx
       ],
       imports: [
         'vue',
