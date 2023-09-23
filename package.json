@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "astro dev",
     "now": "npm run build && npm run preview",
+    "lighthouse": "npx unlighthouse --site https://pg-astro-css.netlify.app",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -33,7 +34,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "svelte": "^4.1.1",
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "vee-validate": "^4.11.6"
   },
   "devDependencies": {
     "@iconify/json": "^2.2.95",
