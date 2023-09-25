@@ -80,21 +80,19 @@ export default defineConfig({
   ],
   vite: {
     plugins: [
+      // For details, refer to https://github.com/antfu/unplugin-vue-components#configuration
       AutoImportComponents({
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
 
-        // allow auto load markdown components under ./src/components/
         dirs: ['src/components'],
 
-        extensions: ['vue', 'jsx', 'tsx', 'js', 'ts', 'mdx', 'svelte'],
+        // allow auto load markdown components under ./src/components/
+        extensions: ['vue', 'md'],
 
         // allow auto import and register components used in markdown
-        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        include: [/.vue$/, /.vue?vue/, /.md$/],
 
-        resolvers: [], // Auto-import using resolvers
-
-        transformer: 'vue3',
-
+        // resolvers: [], // Auto-import using resolvers
         dts: 'components.d.ts',
       }),
       // VueDevTools()
