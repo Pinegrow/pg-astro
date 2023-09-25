@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro'
 // import Header from '../components/Header.astro'
 // import Footer from '../components/Footer.astro'
 import {SITE_TITLE, SITE_DESCRIPTION} from '../consts'
+import MetaTags from '../components/MetaTags.vue'
 
 export interface Props {
   title: string
@@ -17,6 +18,7 @@ const {title} = Astro.props
   </head>
   <body>
     <!-- <Header title={SITE_TITLE} /> -->
+    <MetaTags />
     <slot />
     <!-- <Footer /> -->
     <style is:global>
