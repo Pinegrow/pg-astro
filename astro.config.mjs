@@ -35,7 +35,10 @@ export default defineConfig({
         // ],
       },
     }),
-    vue(),
+    vue({
+      appEntrypoint: '/src/app',
+    }),
+
     react(),
     preact(),
     svelte(),
