@@ -72,9 +72,9 @@
 
   useHead({
     // title,
-    titleTemplate: (titleChunk) => {
-      return titleChunk ? `${titleChunk} - ${title}` : title
-    },
+    // titleTemplate: (titleChunk) => {
+    //   return titleChunk ? `${titleChunk} - ${title}` : title
+    // },
     htmlAttrs: {lang: 'en-US'},
     meta: [
       {name: 'charset', content: 'utf-8'},
