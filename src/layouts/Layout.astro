@@ -18,7 +18,7 @@ const {title} = Astro.props
   </head>
   <body>
     <Header title={SITE_TITLE} />
-    <MetaTags />
+    <MetaTags client:load />
     <slot />
     <Footer />
     <style is:global>
