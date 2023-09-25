@@ -1,3 +1,5 @@
+import {fileURLToPath, URL} from 'node:url'
+
 import {defineConfig} from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
@@ -7,16 +9,18 @@ import react from '@astrojs/react'
 import svelte from '@astrojs/svelte'
 
 import Pinegrow from '@pinegrow/astro-module'
-import {fileURLToPath, URL} from 'node:url'
 import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/astro'
 import presetIcons from '@unocss/preset-icons'
 // import VueDevTools from 'vite-plugin-vue-devtools'
 
+import site from './src/site'
+const {url} = site
+
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: url,
   integrations: [
     Pinegrow({
       liveDesigner: {
@@ -38,7 +42,6 @@ export default defineConfig({
     vue({
       appEntrypoint: '/src/app',
     }),
-
     react(),
     preact(),
     svelte(),
@@ -65,10 +68,11 @@ export default defineConfig({
         // 'vue-router',
         // 'vue-i18n',
         // 'vue/macros',
-        // '@vueuse/head',
-        // '@vueuse/core',
+        '@vueuse/head',
+        '@vueuse/core',
         'pinia',
       ],
+      /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
       dirs: ['src/composables', 'src/stores'],
       vueTemplate: true,
       dts: 'auto-imports.d.ts',
@@ -77,14 +81,30 @@ export default defineConfig({
   vite: {
     plugins: [
       AutoImportComponents({
-        // dirs: ['src/components'], // default
-        // resolvers: [], // Auto-import using resolvers
+        /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
+
+        // allow auto load markdown components under ./src/components/
+        dirs: ['src/components'],
+
+        extensions: ['vue', 'jsx', 'tsx', 'js', 'ts', 'mdx', 'svelte'],
+
+        // allow auto import and register components used in markdown
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+
+        resolvers: [], // Auto-import using resolvers
+
+        transformer: 'vue3',
+
         dts: 'components.d.ts',
       }),
       // VueDevTools()
     ],
     resolve: {
       alias: {
+        /* Must be either an object, or an array of { find, replacement, customResolver } pairs. */
+        /* Refer to: https://vitejs.dev/config/shared-options.html#resolve-alias */
+        /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
+
         '@': fileURLToPath(new URL('./src', import.meta.url)),
         '~': fileURLToPath(new URL('./src', import.meta.url)),
         '~~': fileURLToPath(new URL('./', import.meta.url)),
