@@ -1,7 +1,7 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import '../assets/css/global.css'
+import { fontUrls } from '@/utils/font'
+import '@/assets/css/global.css'
+import 'prismjs/themes/prism-tomorrow.css'
 
 interface Props {
   title: string
@@ -21,7 +21,7 @@ const {title, description, image = '/blog-placeholder-1.jpg'} = Astro.props
 <meta name="generator" content={Astro.generator} />
 
 <!-- Font preloads -->
-<link
+<!-- <link
   rel="preload"
   href="/fonts/atkinson-regular.woff"
   as="font"
@@ -34,6 +34,12 @@ const {title, description, image = '/blog-placeholder-1.jpg'} = Astro.props
   as="font"
   type="font/woff"
   crossorigin
+/> -->
+<link
+  rel="preload"
+  href={fontUrls.toString()}
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
 />
 
 <!-- Canonical URL -->
