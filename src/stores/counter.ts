@@ -1,5 +1,5 @@
-import {defineStore} from 'pinia'
-import {ref, computed} from 'vue'
+import { defineStore } from 'pinia'
+import { ref, computed } from 'vue'
 
 export const useCounterStore = defineStore('counter', () => {
   // 1. State (ref, reactive, etc) / getters (computed)
@@ -20,6 +20,6 @@ export const useCounterStore = defineStore('counter', () => {
 
 if (import.meta.hot) {
   import.meta.hot.accept(
-    acceptHMRUpdate(useCounterStore as any, import.meta.hot)
+    acceptHMRUpdate(useCounterStore as any, import.meta.hot),
   )
 }

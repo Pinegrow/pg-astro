@@ -1,46 +1,47 @@
 ---
-// import BaseHead from '../components/BaseHead.astro'
-import '../assets/css/global.css'
+import BaseHead from '@/components/BaseHead.astro'
 
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
-import {SITE_TITLE, SITE_DESCRIPTION} from '../consts'
-import MetaTags from '../components/MetaTags.vue'
+import Header from '@/components/Header.astro'
+import Footer from '@/components/Footer.astro'
+import {SITE_TITLE, SITE_DESCRIPTION} from '@/consts'
 
 export interface Props {
   title: string
 }
 const {title} = Astro.props
+const currentPath = Astro.url.pathname
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <!-- <head>
+  <head>
     <BaseHead title={title || SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head> -->
+  </head>
   <body>
     <Header title={SITE_TITLE} />
-    <MetaTags client:load />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer />
-    <style is:global>
-      /* :root {
-    --accent: 124, 58, 237;
-    --accent-gradient: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      #da62c4 30%,
-      white 60%
-    );
-  }
-  html {
-    font-family: system-ui, sans-serif;
-    background-color: #f6f6f6;
-  }
-  code {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-  } */
-    </style>
   </body>
 </html>
+
+<style is:global>
+  /* :root {
+--accent: 124, 58, 237;
+--accent-gradient: linear-gradient(
+  45deg,
+  rgb(var(--accent)),
+  #da62c4 30%,
+  white 60%
+);
+}
+html {
+font-family: system-ui, sans-serif;
+background-color: #f6f6f6;
+}
+code {
+font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+  DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+} */
+</style>

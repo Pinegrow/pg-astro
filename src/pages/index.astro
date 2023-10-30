@@ -1,9 +1,9 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import HeroSection from '../components/HeroSection.vue'
+import Layout from '@/layouts/Layout.astro'
+import HeroSection from "@/components/HeroSection.vue";
 ---
 
 <Layout title="Home">
-  <HeroSection />
+<HeroSection client:load/>  
 </Layout>
 <style></style>

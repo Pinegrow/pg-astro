@@ -10,12 +10,8 @@
 
 // import 'uno.css' // Not required for astro unocss integration
 
-import type {App} from 'vue'
-
-import pinia from '@/plugins/pinia'
-import head from '@/plugins/head'
+import type { App } from 'vue'
 
 export default (app: App) => {
-  app.use(pinia)
-  app.use(head)
+  //...
 }
