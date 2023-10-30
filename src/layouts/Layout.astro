@@ -21,7 +21,9 @@ const {title} = Astro.props
   <body>
     <!-- <Header title={SITE_TITLE} /> -->
     <MetaTags client:load />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <!-- <Footer /> -->
     <style is:global>
       /* :root {
