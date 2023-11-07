@@ -98,7 +98,7 @@
         {
           "name": "color-demo",
           "description": "Note, this is not a global prop, added here just to show an example of how it is defined in web-types.",
-          "customType": "color",
+          "customType": "select",
           "options": []
         }
       ]
