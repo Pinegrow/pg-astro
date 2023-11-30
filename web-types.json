@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/web-types",
   "name": "project",
-  "framework": "vue",
+  "framework": "project",
   "version": "0.0.0",
   "contributions": {
     "html": {
@@ -45,8 +45,7 @@
           ]
         },
         {
-          "name": "BaseButtonDemo",
-          "description": "Note, this is not a real component in this project, added here just to show an example of how it is defined in web-types.",
+          "name": "BaseButton",
           "attributes": [
             {
               "name": "label",
@@ -96,8 +95,7 @@
       ],
       "attributes": [
         {
-          "name": "color-demo",
-          "description": "Note, this is not a global prop, added here just to show an example of how it is defined in web-types.",
+          "name": "color",
           "customType": "select",
           "options": []
         }
