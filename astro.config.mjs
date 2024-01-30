@@ -3,10 +3,11 @@ import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
-import preact from '@astrojs/preact'
-import solidJs from '@astrojs/solid-js'
-import react from '@astrojs/react'
-import svelte from '@astrojs/svelte'
+import tailwind from '@astrojs/tailwind'
+// import preact from '@astrojs/preact'
+// import solidJs from '@astrojs/solid-js'
+// import react from '@astrojs/react'
+// import svelte from '@astrojs/svelte'
 import Pinegrow from '@pinegrow/astro-module'
 import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
@@ -24,24 +25,28 @@ export default defineConfig({
   integrations: [
     // myAstroModule,
     vue({
-      // https://github.com/vuetifyjs/vuetify-loader/tree/master/packages/vite-plugin#image-loading
+      appEntrypoint: '/src/app',
       template: {
         compilerOptions: {
           isCustomElement: (tag) => tag === 'lite-youtube',
         },
       },
-      appEntrypoint: '/src/app',
     }),
-    preact({
-      include: ['**/preact/*'],
+    tailwind({
+      // Example: Disable injecting a basic `base.css` import on every page.
+      // Useful if you need to define and/or import your own custom `base.css`.
+      applyBaseStyles: false,
     }),
-    react({
-      include: ['**/react/*'],
-    }),
-    solidJs({
-      include: ['**/solid/*'],
-    }),
-    svelte(),
+    // preact({
+    //   include: ['**/preact/*'],
+    // }),
+    // react({
+    //   include: ['**/react/*'],
+    // }),
+    // solidJs({
+    //   include: ['**/solid/*'],
+    // }),
+    // svelte(),
     Unocss({
       presets: [
         presetIcons({
@@ -79,7 +84,7 @@ export default defineConfig({
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
         'src/composables',
         'src/utils',
-        // 'src/stores',
+        'src/stores',
       ],
       vueTemplate: true,
       dts: 'auto-imports.d.ts',
@@ -87,7 +92,14 @@ export default defineConfig({
     Pinegrow({
       liveDesigner: {
         iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
-        devtoolsKey: 'devtools', // see app.ts
+        devtoolsKey: 'devtoolsKey', // see app.ts
+        tailwindcss: {
+          configPath: 'tailwind.config.ts',
+          cssPath: '@/assets/css/tailwind.css',
+          // themePath: false, // Set to false so that Design Panel is not used
+          // restartOnConfigUpdate: true,
+          restartOnThemeUpdate: true,
+        },
         // plugins: [
         //   {
         //     name: 'My Awesome Lib 3.0',
@@ -108,7 +120,8 @@ export default defineConfig({
 
         dirs: ['src/components'], // allow auto load markdown components under ./src/components/
         extensions: ['vue', 'md'], // allow auto import and register components used in markdown
-        include: [/\.vue$/, /\.vue\?vue/, /\.md$/], // resolvers: [], // Auto-import using resolvers
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/, /\.mdx?/],
+        // resolvers: [], // Auto-import using resolvers
         dts: 'components.d.ts',
       }),
       // VueDevTools()
