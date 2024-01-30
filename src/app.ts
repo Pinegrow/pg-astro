@@ -8,7 +8,7 @@
 //   window.devtoolsKey = devtools
 // }
 
-// import 'uno.css' // Not required for astro unocss integration
+import 'uno.css'
 
 import type { App } from 'vue'
 import pinia from '@/plugins/pinia'
