@@ -3,7 +3,6 @@ import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
 import sitemap from '@astrojs/sitemap'
 import vue from '@astrojs/vue'
-import tailwind from '@astrojs/tailwind'
 // import preact from '@astrojs/preact'
 // import solidJs from '@astrojs/solid-js'
 // import react from '@astrojs/react'
@@ -31,11 +30,6 @@ export default defineConfig({
           isCustomElement: (tag) => tag === 'lite-youtube',
         },
       },
-    }),
-    tailwind({
-      // Example: Disable injecting a basic `base.css` import on every page.
-      // Useful if you need to define and/or import your own custom `base.css`.
-      applyBaseStyles: false,
     }),
     // preact({
     //   include: ['**/preact/*'],
@@ -93,13 +87,6 @@ export default defineConfig({
       liveDesigner: {
         iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
         devtoolsKey: 'devtoolsKey', // see app.ts
-        tailwindcss: {
-          configPath: 'tailwind.config.ts',
-          cssPath: '@/assets/css/tailwind.css',
-          // themePath: false, // Set to false so that Design Panel is not used
-          // restartOnConfigUpdate: true,
-          restartOnThemeUpdate: true,
-        },
         // plugins: [
         //   {
         //     name: 'My Awesome Lib 3.0',
