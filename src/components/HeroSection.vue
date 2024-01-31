@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import 'uno.css'
   // const props = defineProps({
   // 	name: {
   // 		type: String,
