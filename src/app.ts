@@ -5,13 +5,14 @@
 //   // devtools.connect(/* host, port */)
 //   // (window as any) = devtools
 //   // @ts-ignore
-//   window.devtools = devtools
+//   window.devtoolsKey = devtools
 // }
 
 // import 'uno.css' // Not required for astro unocss integration
 
 import type { App } from 'vue'
+import pinia from '@/plugins/pinia'
 
 export default (app: App) => {
-  //...
+  app.use(pinia)
 }
