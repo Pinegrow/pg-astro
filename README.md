@@ -60,8 +60,10 @@ npm run build # MPA SSG (islands architecture)
 
 ### Analyze
 
+Uncomment the `rollup-plugin-visualizer` usage in your config file and execute the `build` command. This command will generate `stats.html`. Open `stats.html` in your browser to analyze bundle sizes.
+
 ```bash
-npm run analyze # bundle sizes
+npm run build # open stats.html to analyze bundle sizes
 ```
 
 ### Preview

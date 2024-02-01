@@ -60,6 +60,7 @@
     "ofetch": "^1.3.3",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.1",
+    "rollup-plugin-visualizer": "^5.12.0",
     "typescript": "^5.2",
     "unocss": "^0.57.2",
     "unplugin-auto-import": "^0.16.7",
