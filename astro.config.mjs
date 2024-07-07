@@ -82,7 +82,7 @@ export default defineConfig({
         //     name: 'My Awesome Lib 3.0',
         //     key: 'my-awesome-lib',
         //     pluginPath: fileURLToPath(
-        //       new URL('./my-awesome-lib/web-types.json', import.meta.url),
+        //       new URL('./web-types/my-awesome-lib.json', import.meta.url),
         //     ),
         //   },
         // ],

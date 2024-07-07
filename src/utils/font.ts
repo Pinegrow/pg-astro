@@ -4,6 +4,7 @@ const pg_font_urls =
 const getFontsWithFallback = (pg_fonts) => {
   const pg_fonts_with_fallback = { ...pg_fonts }
   Object.entries(pg_fonts_with_fallback).forEach(([key, val]) => {
+    //@ts-ignore
     if (val?.length) {
       pg_fonts_with_fallback[key] = pg_fonts_with_fallback[key].map((font) => {
         const fontTokens = font.split(',')
