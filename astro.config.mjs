@@ -12,7 +12,7 @@ import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/vite'
 import presetIcons from '@unocss/preset-icons'
-// import VueDevTools from 'vite-plugin-vue-devtools'
+import VueDevTools from 'vite-plugin-vue-devtools'
 // import myAstroModule from './src/modules/my-module'
 
 // import { visualizer } from 'rollup-plugin-visualizer'
@@ -114,7 +114,7 @@ export default defineConfig({
           },
         },
       }),
-      // VueDevTools()
+      VueDevTools(),
     ],
 
     // build: {
