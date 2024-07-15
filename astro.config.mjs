@@ -114,7 +114,9 @@ export default defineConfig({
           },
         },
       }),
-      VueDevTools(),
+      VueDevTools({
+        appendTo: 'app.ts',
+      }),
     ],
 
     // build: {
