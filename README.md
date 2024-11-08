@@ -32,10 +32,10 @@ npm install #or use pnpm
 
 (or)
 
-If you prefer a blank template (a single empty home page) instead,
+If you prefer a minimal template (a single empty home page) instead,
 
 ```bash
-npx giget@latest gh:pinegrow/pg-astro#blank my-astro-app #project-name
+npx giget@latest gh:pinegrow/pg-astro#minimal my-astro-app #project-name
 cd my-astro-app
 npm install #or use pnpm
 ```
