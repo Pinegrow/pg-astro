@@ -16,7 +16,6 @@
     "preview": "astro preview",
     "astro": "astro",
     "typecheck": "vue-tsc --noEmit",
-    "vue-devtools": "vue-devtools",
     "lint": "npm run lint:fix && npm run format",
     "lint:fix": "eslint --fix --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts ./ --ignore-path .gitignore",
     "format": "prettier --write \"**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,html,css,md,mdx,json}\" !public --ignore-path .gitignore"
@@ -52,7 +51,6 @@
     "@pinegrow/astro-module": "^3.0.60",
     "@types/node": "^22.9.0",
     "@unocss/preset-icons": "^0.64.0",
-    "@vue/devtools": "^7.6.3",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^9.1.0",
     "npm-run-all": "^4.1.5",
@@ -64,7 +62,6 @@
     "unocss": "^0.64.0",
     "unplugin-auto-import": "^0.18.3",
     "unplugin-vue-components": "^0.27.4",
-    "vite-plugin-vue-devtools": "^7.6.3",
     "vue-tsc": "^2.1"
   },
   "web-types": "web-types.json"
