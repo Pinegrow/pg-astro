@@ -1,8 +1,8 @@
 {
   "name": "pg-astro",
-  "type": "module",
   "version": "0.0.1",
   "homepage": "https://pg-astro-css.netlify.app",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/pinegrow/pg-astro.git"
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@iconify/json": "^2.2.269",
     "@nuxt/eslint-config": "^0.6.1",
-    "@pinegrow/astro-module": "^3.0.60",
+    "@pinegrow/astro-module": "^3.0.65",
     "@types/node": "^22.9.0",
     "@unocss/preset-icons": "^0.64.0",
     "eslint": "^8.57.1",
