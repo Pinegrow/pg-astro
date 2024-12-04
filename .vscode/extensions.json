@@ -1,8 +1,10 @@
 {
   "recommendations": [
-    "astro-build.astro-vscode",
     "Vue.volar",
+    "sdras.vue-vscode-snippets",
+    "antfu.file-nesting",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "astro-build.astro-vscode"
   ]
 }
