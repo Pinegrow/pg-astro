@@ -52,7 +52,7 @@
   "open-pages": ["src/components/HeroSection.vue"],
   "urls": {
     "src/components/HeroSection.vue": {
-      "open-page-views": [{ "w": 1024, "h": 1024 }]
+      "open-page-views": [{ "w": 1004, "h": 1024 }]
     },
     "src/components/HelloWorld.vue": {
       "open-page-views": [{ "w": 1024, "h": 0 }]
