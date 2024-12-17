@@ -73,6 +73,7 @@ export default defineConfig({
         'src/composables',
         'src/utils',
         'src/stores',
+        '**/pg-*/**', // To auto-import composables from Vue Designer plugins.
       ],
       vueTemplate: true,
       dts: 'auto-imports.d.ts',
