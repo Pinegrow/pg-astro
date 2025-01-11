@@ -3,7 +3,7 @@
 // @unocss-include
 
 export default {
-  name: 'Vue Designer',
+  title: 'Vue Designer',
   description: 'Vue Designer Astro CSS - Quick start template',
   // logo: 'i-emojione-rocket',
   logo: 'i-vscode-icons:file-type-coffeelint',
@@ -17,9 +17,25 @@ export default {
   twitter: '@vuedesigner',
   trailingSlash: false, // default
   titleSeparator: '|', // default
-  nav: [
-    { text: 'Home', link: '/' },
-    { text: 'Blog', link: '/blog' },
-    { text: 'About', link: '/about' },
-  ],
+  navs: {
+    primary: [
+      {
+        title: 'Home',
+        icon: 'i-mdi-home',
+        to: '/',
+      },
+      {
+        title: 'Blog',
+        icon: 'i-mdi-home',
+        to: '/blog',
+      },
+    ],
+    secondary: [
+      {
+        title: 'About',
+        icon: 'i-mdi-home',
+        to: '/about',
+      },
+    ],
+  },
 }

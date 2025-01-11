@@ -20,8 +20,8 @@ import presetIcons from '@unocss/preset-icons'
 
 // import { visualizer } from 'rollup-plugin-visualizer'
 
-import site from './src/site'
-const { url } = site
+import siteMeta from './src/site'
+const { url } = siteMeta
 
 // https://astro.build/config
 export default defineConfig({
