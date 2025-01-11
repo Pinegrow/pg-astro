@@ -24,11 +24,6 @@ export default {
         icon: 'i-mdi-home',
         to: '/',
       },
-      {
-        title: 'Blog',
-        icon: 'i-mdi-home',
-        to: '/blog',
-      },
     ],
     secondary: [
       {
