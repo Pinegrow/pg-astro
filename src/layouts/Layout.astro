@@ -1,33 +1,48 @@
 ---
-import BaseHead from '@/components/BaseHead.astro'
-
 // import Header from '@/components/Header.astro'
 // import Footer from '@/components/Footer.astro'
-import {SITE_TITLE, SITE_DESCRIPTION} from '@/consts'
+
+import { useHeadAndMeta } from "@/composables/head-and-meta";
 
 export interface Props {
   title: string
+  description?: string
+  ogImage?: any
+  tags?: string | string[]
 }
-const {title} = Astro.props
+
+const { title, description, ogImage, tags } = Astro.props
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
+const generator = Astro.generator
+
+// TODO: How to add htmlAttrs, bodyAttrs in Astro?
+const { headTags, bodyTags, bodyTagsOpen/*, htmlAttrs, bodyAttrs*/ } = await useHeadAndMeta({ title,  description, ogImage, canonicalUrl, generator, tags })
+
 const currentPath = Astro.url.pathname
 ---
-<script>
-  import 'uno.css'
-</script>
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={title || SITE_TITLE} description={SITE_DESCRIPTION} />
+    <Fragment set:html={headTags}/>
   </head>
   <body>
-    <!-- <Header title={SITE_TITLE} /> -->
+    <!-- <Header title={title} /> -->
+    <Fragment set:html={bodyTagsOpen}/>
     <main>
       <slot />
     </main>
     <!-- <Footer /> -->
-    <style is:global>
-      /* :root {
+    <Fragment set:html={bodyTags}/>
+  </body>
+</html>
+
+<style is:global>
+  @import '@/assets/css/global.css';
+  @import 'prismjs/themes/prism-tomorrow.css';
+
+  /* :root {
     --accent: 124, 58, 237;
     --accent-gradient: linear-gradient(
       45deg,
@@ -35,35 +50,13 @@ const currentPath = Astro.url.pathname
       #da62c4 30%,
       white 60%
     );
-  }
-  html {
+    }
+    html {
     font-family: system-ui, sans-serif;
     background-color: #f6f6f6;
-  }
-  code {
+    }
+    code {
     font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-      DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   } */
-    </style>
-  </body>
-</html>
-
-<style is:global>
-  /* :root {
---accent: 124, 58, 237;
---accent-gradient: linear-gradient(
-  45deg,
-  rgb(var(--accent)),
-  #da62c4 30%,
-  white 60%
-);
-}
-html {
-font-family: system-ui, sans-serif;
-background-color: #f6f6f6;
-}
-code {
-font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-  DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-} */
 </style>
