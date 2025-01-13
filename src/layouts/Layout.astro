@@ -2,7 +2,7 @@
 import Header from '@/components/Header.astro'
 import Footer from '@/components/Footer.astro'
 
-import { useHeadAndMeta } from "@/composables/head-and-meta";
+import { useHeadAndMeta } from '@/composables/head-and-meta'
 
 export interface Props {
   title: string
@@ -17,24 +17,32 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site)
 const generator = Astro.generator
 
 // TODO: How to add htmlAttrs, bodyAttrs in Astro?
-const { headTags, bodyTags, bodyTagsOpen/*, htmlAttrs, bodyAttrs*/ } = await useHeadAndMeta({ title,  description, ogImage, canonicalUrl, generator, tags })
+const { headTags, bodyTags, bodyTagsOpen /*, htmlAttrs, bodyAttrs*/ } =
+  await useHeadAndMeta({
+    title,
+    description,
+    ogImage,
+    canonicalUrl,
+    generator,
+    tags,
+  })
 
 const currentPath = Astro.url.pathname
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <Fragment set:html={headTags}/>
+    <Fragment set:html={headTags} />
   </head>
   <body>
     <Header title={title} />
-    <Fragment set:html={bodyTagsOpen}/>
+    <Fragment set:html={bodyTagsOpen} />
     <main>
       <slot />
     </main>
     <Footer />
-    <Fragment set:html={bodyTags}/>
+    <Fragment set:html={bodyTags} />
   </body>
 </html>
 
