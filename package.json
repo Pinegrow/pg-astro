@@ -18,7 +18,7 @@
     "typecheck": "vue-tsc --noEmit",
     "lint": "npm run lint:fix && npm run format",
     "lint:fix": "eslint --fix ./",
-    "format": "prettier --write \"**/*.{vue,js,jsx,cjs,mjs,ts,tsx,cts,mts,html,css,md,mdx,json}\" !public --ignore-path .gitignore"
+    "format": "prettier --write \"**/*.{html,vue,svelte,astro,js,jsx,cjs,mjs,ts,tsx,cts,mts,css,md,mdx,json}\" !public --ignore-path .gitignore"
   },
   "dependencies": {
     "@astrojs/mdx": "^3.1.9",
@@ -31,11 +31,11 @@
     "@astrojs/vue": "^4.5.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "@unhead/ssr": "^1.11.16",
-    "@vueuse/core": "^12.4.0",
     "@unhead/schema": "^1.11.16",
     "@unhead/schema-org": "^1.11.16",
+    "@unhead/ssr": "^1.11.16",
     "@unhead/vue": "^1.11.16",
+    "@vueuse/core": "^12.4.0",
     "astro": "^4.16.10",
     "defu": "^6.1.4",
     "lite-youtube-embed": "^0.3.3",
