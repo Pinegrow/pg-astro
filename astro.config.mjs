@@ -1,6 +1,4 @@
 import { EventEmitter } from 'events'
-// Increasing the maxListeners from default 10 to 15 as there are more than 10 vite plugins (mostly vite/astro) ones using fswatcher
-EventEmitter.defaultMaxListeners = 15
 
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'astro/config'
@@ -16,11 +14,15 @@ import AutoImportComponents from 'unplugin-vue-components/vite'
 import AutoImportAPIs from 'unplugin-auto-import/astro'
 import Unocss from 'unocss/vite'
 import presetIcons from '@unocss/preset-icons'
+import { unheadVueComposablesImports } from '@unhead/vue'
+
 // import myAstroModule from './src/modules/my-module'
 
 // import { visualizer } from 'rollup-plugin-visualizer'
 
 import siteMeta from './src/site'
+// Increasing the maxListeners from default 10 to 15 as there are more than 10 vite plugins (mostly vite/astro) ones using fswatcher
+EventEmitter.defaultMaxListeners = 15
 const { url } = siteMeta
 
 // https://astro.build/config
@@ -64,8 +66,8 @@ export default defineConfig({
         // 'vue-router',
         // 'vue-i18n',
         // 'vue/macros',
-        // '@vueuse/head',
-        // '@vueuse/core',
+        unheadVueComposablesImports,
+        '@vueuse/core',
         'pinia',
       ],
       dirs: [
