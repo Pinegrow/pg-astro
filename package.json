@@ -68,7 +68,12 @@
     "vue-tsc": "^2.2"
   },
   "overrides": {
-    "@sveltejs/vite-plugin-svelte": "^4"
+    "@sveltejs/vite-plugin-svelte": "^4.0.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "@sveltejs/vite-plugin-svelte": "^4.0.4"
+    }
   },
   "web-types": "web-types.json"
 }
