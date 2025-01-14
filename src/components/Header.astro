@@ -1,11 +1,13 @@
 ---
 import HeaderLink from '@/components/HeaderLink.astro'
-import { SITE_TITLE } from '@/consts'
+import siteMeta from '@/site'
+
+const { title } = siteMeta
 ---
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <h2><a href="/">{title}</a></h2>
     <div class="internal-links">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
