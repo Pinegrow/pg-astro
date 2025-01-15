@@ -28,11 +28,11 @@ export default {
       },
     ],
     secondary: [
-      {
-        title: 'About',
-        icon: 'i-mdi-home',
-        to: '/about',
-      },
+      // {
+      //   title: 'About',
+      //   icon: 'i-mdi-home',
+      //   to: '/about',
+      // },
     ],
   },
 }
